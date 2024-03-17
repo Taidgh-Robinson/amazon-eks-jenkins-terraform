@@ -3,9 +3,10 @@
 #!/bin/bash
 sudo yum -y update
 
-echo "Install Java JDK 8"
+echo "Install Java JDK 11" 
 yum remove -y java
-yum install -y java-1.8.0-openjdk
+sudo amazon-linux-extras install java-openjdk11
+PATH=/usr/lib/jvm/java-11-openjdk-11.0.22.0.7-1.amzn2.0.1.x86_64/bin:$PATH
 
 echo "Install Maven"
 yum install -y maven 
