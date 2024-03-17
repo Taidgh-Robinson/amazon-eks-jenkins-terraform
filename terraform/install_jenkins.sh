@@ -21,9 +21,9 @@ yum install docker -y
 sudo chkconfig docker on
 
 echo "Install Jenkins"
-wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
-rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-yum -y install jenkins
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo yum -y install jenkins
 sudo usermod -a -G docker jenkins
 sudo chkconfig jenkins on
 sudo service docker start
